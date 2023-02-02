@@ -1,0 +1,27 @@
+<!-- <p>idDa: {{ da.id }}</p> -->
+
+<div class="card mb-3 text-center" style="max-width: 500px; margin: 10px auto">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img
+        src="https://source.unsplash.com/random"
+        class="img-fluid rounded-start"
+        alt="https://source.unsplash.com/random"
+      />
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{ da.tenDuAn }}</h5>
+        <h5 class="card-title">Leader {{ da.leader }}</h5>
+        <span>Thành viên {{ da.thanhvien }}</span>
+        <p class="card-text">
+          {{ da.tien.toLocaleString("vn-VN") + " VND" }}
+        </p>
+        <p class="card-text">{{ da.ngayStart | date: "dd /MM/Y" }}</p>
+        <p class="card-text">
+          <a href="#" class="btn btn-primary">Button</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,108 @@
+<style>
+  form {
+    background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+    background: linear-gradient(to right, #25c481, #25b7c4);
+    font-family: "Roboto", sans-serif;
+    padding: 20px;
+  }
+</style>
+<h5 class="bg-warning p-2">Sửa task</h5>
+<form
+  #frmSuaTA="ngForm"
+  class="col-6 m-auto"
+  (ngSubmit)="taSua(frmSuaTA.value)"
+>
+  <input
+    hidden
+    type="hidden"
+    class="form-control"
+    name="id"
+    [(ngModel)]="ta.id"
+  />
+  <p class="mb-3 text-dark">
+    Tên task
+    <input
+      type="text"
+      class="form-control"
+      name="tenTask"
+      [(ngModel)]="ta.tenTask"
+    />
+  </p>
+  <p class="mb-3 text-dark">
+    Mô tả
+    <input type="text" class="form-control" name="moTa" [(ngModel)]="ta.moTa" />
+  </p>
+  <p class="mb-3 text-dark">
+    Quyền ưu tiên
+    <select name="priority" [(ngModel)]="ta.priority" class="form-control">
+      <option value="1">Cấp cao</option>
+      <option value="2">Cấp thấp</option>
+    </select>
+    <!-- <select
+      name="priority"
+      [(ngModel)]="ta.priority"
+      class="form-control"
+      required
+      minlength="1"
+    >
+      <option *ngFor="let item of listTa" value="  {{ item.priority }}">
+        {{ item.leader == 1 ? "Trưởng phòng" : "Nhân viên" }}
+        {{ item.priority }}
+      </option>
+    </select> -->
+    <!-- <input
+      type="text"
+      name="priority"
+      [(ngModel)]="ta.priority"
+      class="form-control"
+    /> -->
+  </p>
+  <p class="mb-3 text-dark">
+    Trạng thái
+    <select
+      formControlName="status"
+      name="status"
+      [(ngModel)]="ta.status"
+      class="form-control"
+    >
+      <option value="1">Đi làm</option>
+      <option value="2">Nghỉ làm</option>
+    </select>
+    <!-- <input
+      name="status"
+      [(ngModel)]="ta.status"
+      type="text"
+      class="form-control"
+    /> -->
+  </p>
+  <p class="mb-3 text-dark">
+    Dự án
+    <input
+      name="duAnID"
+      [(ngModel)]="ta.duAnID"
+      type="text"
+      class="form-control"
+    />
+  </p>
+  <p class="mb-3 text-dark">
+    Nhân viên
+    <input
+      name="nhanvienID"
+      [(ngModel)]="ta.nhanvienID"
+      type="text"
+      class="form-control"
+    />
+  </p>
+  <p class="mb-3 text-dark">
+    Leader
+
+    <input
+      name="leader"
+      [(ngModel)]="ta.leader"
+      type="text"
+      class="form-control"
+    />
+  </p>
+
+  <button type="submit" class="btn btn-primary p-2">Sửa Task</button>
+</form>

@@ -1,0 +1,17 @@
+<hr />
+<form #frm1="ngForm" (ngSubmit)="xulyMK(frm1.value)" class="col-6 m-auto">
+  <h4>ĐỔI PASS</h4>
+  <p>
+    <label>MK CŨ</label>
+    <input name="pwOld" ngModel class="form-control" type="password" />
+  </p>
+  <p>
+    <label>MK MỚI</label>
+    <input name="pwNew" ngModel class="form-control" type="password" />
+  </p>
+  <p>
+    <label>MK MỚI 2</label>
+    <input name="pwNew2" ngModel class="form-control" type="password" />
+  </p>
+  <p><button type="submit" class="btn btn-success">ĐỔI MẬT KHẨU</button></p>
+</form>

@@ -1,0 +1,10 @@
+body {
+  /* background: linear-gradient(90.06deg, #f62682 -4.45%, #6f5cf1 104.12%); */
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  line-height: 1.42em;
+  color: #a7a1ae;
+  background-color: #1f2739 !important;
+}

@@ -1,0 +1,164 @@
+<style>
+  form {
+    background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+    background: linear-gradient(to right, #25c481, #25b7c4);
+    font-family: "Roboto", sans-serif;
+    padding: 20px;
+  }
+</style>
+<h5 class="bg-warning p-2">THÊM nhân viên</h5>
+<!-- <form #frm3="ngForm" (ngSubmit)="xuly(frm3.value)" class="col-6 m-auto"> -->
+<form #frm3="ngForm" (ngSubmit)="nvthem(frm3.value)" class="col-6 m-auto">
+  <p class="mb-3 text-dark">
+    id
+    <input
+      type="text"
+      class="form-control"
+      name="id"
+      required
+      [(ngModel)]="id"
+      minlength="1"
+    />
+  </p>
+  <p class="mb-3 text-dark">
+    Họ nhân viên
+    <input
+      type="text"
+      class="form-control"
+      name="ho"
+      required
+      [(ngModel)]="ho"
+      minlength="3"
+      #hoo="ngModel"
+    /><em *ngIf="hoo.invalid" class="text-dark"> Nhập họ chưa đúng. </em>
+    <span *ngIf="hoo.errors?.['required']" class="text-dark">
+      họ dài từ 3 ký tự nhé.
+    </span>
+    <em
+      *ngIf="hoo.errors?.['minlength']['actualLength']<hoo.errors?.['minlength']['requiredLength']"
+      class="text-dark"
+    >
+      họ chưa đủ dài
+    </em>
+  </p>
+  <p class="mb-3 text-dark">
+    Tên nhân viên
+    <input
+      type="text"
+      class="form-control"
+      name="ten"
+      required
+      [(ngModel)]="ten"
+      minlength="3"
+      #tenn="ngModel"
+    />
+    <em *ngIf="tenn.invalid" class="text-dark"> Nhập tên chưa đúng. </em>
+    <span *ngIf="tenn.errors?.['required']" class="text-dark">
+      tên dài từ 3 ký tự nhé.
+    </span>
+    <em
+      *ngIf="tenn.errors?.['minlength']['actualLength']<tenn.errors?.['minlength']['requiredLength']"
+      class="text-dark"
+    >
+      tên chưa đủ dài
+    </em>
+  </p>
+  <p class="mb-3 text-dark">
+    Ngày sinh
+    <input
+      type="date"
+      class="form-control"
+      name="ngaysinh"
+      required
+      [(ngModel)]="ngaysinh"
+      minlength="8"
+      #sinh="ngModel"
+    />
+    <em *ngIf="sinh.invalid" class="text-dark"> Nhập ngày sinh chưa đúng. </em>
+    <span *ngIf="sinh.errors?.['required']" class="text-dark">
+      ngày sinh dài từ 8 ký tự nhé.
+    </span>
+    <em
+      *ngIf="sinh.errors?.['minlength']['actualLength']<sinh.errors?.['minlength']['requiredLength']"
+      class="text-dark"
+    >
+      ngày sinh chưa đủ dài
+    </em>
+  </p>
+  <p class="mb-3 text-dark">
+    Phái<select
+      name="phai"
+      [(ngModel)]="phai"
+      class="form-control"
+      required
+      minlength="1"
+      #phaii="ngModel"
+    >
+      <option value="1">Nam</option>
+      <option value="2">Nữ</option>
+      <!-- <option *ngFor="let item of listNV" value="{{ item.phai }}">
+     
+        {{ item.phai == true ? "Nam" : "Nữ" }}
+      </option> -->
+    </select>
+    <!-- <input
+      type="text"
+      class="form-control"
+      name="phai"
+      required
+      [(ngModel)]="phai"
+      minlength="1"
+      #phaii="ngModel"
+    /> -->
+    <!-- <em *ngIf="phaii.invalid" class="text-dark">
+      Nhập ngày phaii chưa đúng.
+    </em>
+    <span *ngIf="phaii.errors?.['required']" class="text-dark">
+      ngày phaii dài từ 1 ký tự nhé.
+    </span>
+    <em
+      *ngIf="phaii.errors?.['minlength']['actualLength']<phaii.errors?.['minlength']['requiredLength']"
+      class="text-dark"
+    >
+      ngày phaii chưa đủ dài
+    </em> -->
+  </p>
+  <p class="mb-3 text-dark">
+    Khu vực<select
+      name="khuvuc"
+      [(ngModel)]="khuvuc"
+      class="form-control"
+      required
+      minlength="1"
+      #kv="ngModel"
+    >
+      <option value="Bắc">Bắc</option>
+
+      <option value="Nam">Nam</option>
+      <!-- <option *ngFor="let item of listNV" value="{{ item.phai }}">
+   
+      {{ item.phai == true ? "Nam" : "Nữ" }}
+    </option> -->
+    </select>
+    <!-- <input
+      type="text"
+      class="form-control"
+      name="khuvuc"
+      required
+      [(ngModel)]="khuvuc"
+      minlength="1"
+      #kv="ngModel"
+    />
+    <em *ngIf="kv.invalid" class="text-dark"> Nhập ngày kv chưa đúng. </em>
+    <span *ngIf="kv.errors?.['required']" class="text-dark">
+      kv dài từ 1 ký tự nhé.
+    </span>
+    <em
+      *ngIf="kv.errors?.['minlength']['actualLength']<kv.errors?.['minlength']['requiredLength']"
+      class="text-dark"
+    >
+      kv chưa đủ dài
+    </em> -->
+  </p>
+  <button class="btn btn-primary p-2">Thêm nhân viên</button>
+</form>

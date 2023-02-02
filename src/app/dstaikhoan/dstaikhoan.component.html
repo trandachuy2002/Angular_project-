@@ -1,0 +1,91 @@
+<style>
+  a {
+    text-decoration: none;
+  }
+  section {
+    background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+    background: linear-gradient(to right, #25c481, #25b7c4);
+    font-family: "Roboto", sans-serif;
+    padding: 20px;
+  }
+  td,
+  th {
+    font-size: 18px;
+  }
+  td a {
+    color: aliceblue;
+  }
+</style>
+
+<!-- <table class="table table-bordered border border-primary mt-3">
+    <caption align="top" class="bg-warning p-2">
+      DANH SÁCH DỰ ÁN
+    </caption>
+    <tr>
+      <th>id</th>
+      <th>Tên dự án</th>
+      <th>Ngày start</th>
+      <th>Tiền</th>
+      <th>Action</th>
+    </tr>
+    <tr *ngFor="let da of listDuAn">
+      <td>{{ da.id }}</td>
+      <td>
+        <a href="#" [routerLink]="['/admin/duan', da.id]">{{ da.tenDuAn }}</a>
+      </td>
+      <td>{{ da.ngayStart | date: "dd /MM/Y" }}</td>
+      <td>{{ da.tien.toLocaleString("vn-VN") + " VND" }}</td>
+      <td>
+        <a href="#" [routerLink]="['/admin/suaDa', da.id]">Sửa</a> &nbsp;
+        <a href="#" (click)="xoaDa(da.id)">Xóa</a>
+      </td>
+    </tr>
+  </table> -->
+<section>
+  <!--for demo wrap-->
+  <h1>{{ listTk.length }} TÀI KHOẢN</h1>
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Tên tài khoản</th>
+          <th>Quyền</th>
+          <th>Thao tác</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+        <tr *ngFor="let tk of listTk">
+          <td>{{ tk.id }}</td>
+          <td>{{ tk.un }}</td>
+          <td>
+            <select
+              class="form-select"
+              aria-label="Default select example"
+              name=""
+              id=""
+              #mySelect
+              (change)="onOptionsSelected(mySelect.value)"
+            >
+              <option
+                *ngFor="let r of role; index as i"
+                [value]="i + '-' + tk.id"
+                [attr.selected]="tk.admin == i ? true : null"
+              >
+                {{ r }}
+              </option>
+            </select>
+          </td>
+
+          <td>
+            <a href="#" (click)="xoaTk(tk.id)">Xóa</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

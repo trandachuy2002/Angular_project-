@@ -1,0 +1,156 @@
+<style>
+  form {
+    background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+    background: linear-gradient(to right, #25c481, #25b7c4);
+    font-family: "Roboto", sans-serif;
+    padding: 20px;
+  }
+</style>
+<h5 class="bg-warning p-2">Thêm task</h5>
+<form
+  #frm2="ngForm"
+  [formGroup]="frm1"
+  (ngSubmit)="themTask(frm2.value)"
+  class="col-6 m-auto"
+  method="POST"
+>
+  <!-- <p class="mb-3  text-dark">
+    iD
+    <input
+      type="number"
+      class="form-control"
+      name="id"
+      formControlName="id"
+      [(ngModel)]="ta.id"
+      required
+      minlength="1"
+    />
+    <em *ngIf="frm1.controls['id']?.errors" class="text-dark">
+      id từ 1 đến 100 ký tự nhe
+    </em>
+  </p> -->
+  <p class="mb-3 text-dark">
+    Tên task
+    <input
+      type="text"
+      class="form-control"
+      name="tenTask"
+      formControlName="tenTask"
+      ngModel
+      required
+      minlength="2"
+    />
+    <em
+      *ngIf="frm1.controls['tenTask']?.errors?.['minlength']['actualLength']<
+      frm1.controls['tenTask']?.errors?.['minlength']['requiredLength']"
+      class="text-warning"
+    >
+      tên còn ngắn lắm từ 2 kí tự nha
+    </em>
+  </p>
+  <p class="mb-3 text-dark">
+    Mô tả
+    <input
+      type="text"
+      formControlName="moTa"
+      class="form-control"
+      name="moTa"
+      ngModel
+      required
+      minlength="6"
+    />
+    <em
+      *ngIf="frm1.controls['moTa']?.errors?.['minlength']['actualLength']<
+      frm1.controls['moTa']?.errors?.['minlength']['requiredLength']"
+      class="text-dark"
+    >
+      mô tả còn ngắn lắm, từ 6 kí tự nhé
+    </em>
+  </p>
+  <p class="mb-3 text-dark">
+    Quyền ưu tiên
+    <select
+      formControlName="priority"
+      name="priority"
+      ngModel
+      class="form-control"
+    >
+      <option value="1">Cấp cao</option>
+      <option value="2">Cấp thấp</option>
+    </select>
+
+    <!-- <input
+      type="text"
+      name="priority"
+      ngModel
+      formControlName="priority"
+      class="form-control"
+      required
+      minlength="1"
+    />
+    <em *ngIf="frm1.controls['priority']?.errors" class="text-dark">
+      priority từ 1 đến 100 ký tự nhe
+    </em> -->
+  </p>
+  <p class="mb-3 text-dark">
+    Trạng thái
+    <select formControlName="status" name="status" ngModel class="form-control">
+      <option value="1">Đi làm</option>
+      <option value="2">Nghỉ làm</option>
+    </select>
+
+    <!-- <input
+      name="status"
+      ngModel
+      formControlName="status"
+      type="text"
+      class="form-control"
+      required
+      minlength="1"
+    />
+    <em *ngIf="frm1.controls['status']?.errors" class="text-dark">
+      status từ 1 đến 100 ký tự nhe
+    </em> -->
+  </p>
+  <p class="mb-3 text-dark">
+    Dự án
+    <input
+      name="duAnID"
+      formControlName="duAnID"
+      ngModel
+      type="text"
+      class="form-control"
+      required
+      minlength="1"
+    />
+    <em *ngIf="frm1.controls['duAnID']?.errors" class="text-dark">
+      duAnID từ 1 đến 100 ký tự nhe
+    </em>
+  </p>
+  <p class="mb-3 text-dark">
+    Nhân viên
+    <input
+      name="nhanvienID"
+      ngModel
+      formControlName="nhanvienID"
+      type="text"
+      class="form-control"
+      required
+      minlength="1"
+    />
+    <em *ngIf="frm1.controls['nhanvienID']?.errors" class="text-dark">
+      nhanvienID từ 1 đến 100 ký tự nhe
+    </em>
+  </p>
+  <p class="mb-3 text-dark">
+    Leader
+    <select name="leader" ngModel formControlName="leader" class="form-control">
+      <option *ngFor="let item of nv" value="{{ item.ten }}">
+        <!-- {{ item.leader == 1 ? "Trưởng phòng" : "Nhân viên" }} -->
+        {{ item.ten }}
+      </option>
+    </select>
+  </p>
+
+  <button class="btn btn-primary p-2">Thêm Task</button>
+</form>

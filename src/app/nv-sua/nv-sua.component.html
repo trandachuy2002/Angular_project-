@@ -1,0 +1,60 @@
+<style>
+  form {
+    background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+    background: linear-gradient(to right, #25c481, #25b7c4);
+    font-family: "Roboto", sans-serif;
+    padding: 20px;
+  }
+</style>
+<h5 class="bg-warning p-2">Sửa nhân viên</h5>
+<form
+  #frmSuaNV="ngForm"
+  class="col-6 m-auto"
+  (ngSubmit)="nvSua(frmSuaNV.value)"
+>
+  <p class="mb-3 text-dark">
+    id
+    <input type="text" class="form-control" name="id" [(ngModel)]="nv.id" />
+  </p>
+  <p class="mb-3 text-dark">
+    Họ nhân viên
+    <input type="text" class="form-control" name="ho" [(ngModel)]="nv.ho" />
+  </p>
+  <p class="mb-3 text-dark">
+    Tên nhân viên
+    <input type="text" class="form-control" name="ten" [(ngModel)]="nv.ten" />
+  </p>
+  <p class="mb-3 text-dark">
+    Ngày sinh
+    <input
+      type="date"
+      class="form-control"
+      name="ngaysinh"
+      [(ngModel)]="nv.ngaysinh"
+    />
+  </p>
+  <p class="mb-3 text-dark">
+    Phái
+    <!-- <input type="text" class="form-control" name="phai" [(ngModel)]="nv.phai" /> -->
+    <select name="phai" [(ngModel)]="nv.phai" class="form-control">
+      <option value="1">Nam</option>
+      <option value="2">Nữ</option>
+    </select>
+  </p>
+  <p class="mb-3 text-dark">
+    Khu vực
+    <select name="khuvuc" [(ngModel)]="nv.khuvuc" class="form-control">
+      <option value="Bắc">Bắc</option>
+      <option value="Nam">Nam</option>
+    </select>
+    <!-- <input
+      type="text"
+      class="form-control"
+      name="khuvuc"
+      [(ngModel)]="nv.khuvuc"
+    /> -->
+  </p>
+  <button class="btn btn-primary p-2" (click)="capnhatNV()">
+    Sửa nhân viên
+  </button>
+</form>

@@ -1,0 +1,75 @@
+<style>
+  a {
+    text-decoration: none;
+  }
+  section {
+    background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+    background: linear-gradient(to right, #25c481, #25b7c4);
+    font-family: "Roboto", sans-serif;
+    padding: 20px;
+  }
+  td,
+  th {
+    font-size: 16px;
+  }
+  td a {
+    color: aliceblue;
+  }
+</style>
+
+<section>
+  <!--for demo wrap-->
+  <h1 style="text-align: center">{{ listTask.length }} Task</h1>
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <input type="checkbox" [(ngModel)]="an" />
+        <tr>
+          <th>#</th>
+          <th>Tên task</th>
+          <th>Mô tả</th>
+          <th>Quyền</th>
+          <th>Trạng thái</th>
+          <th>Leader</th>
+          <th>Thao tác</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody *ngIf="an">
+        <tr *ngFor="let task of listTask">
+          <td>{{ task.id }}</td>
+          <td>
+            <a href="#" [routerLink]="['/admin/task', task.id]">{{
+              task.tenTask
+            }}</a>
+          </td>
+          <td>{{ task.moTa }}</td>
+          <td>{{ task.priority == 1 ? "Cấp cao" : " Cấp thấp" }}</td>
+          <!-- <td>{{ task.ho }} {{ task.ten }}</td> -->
+
+          <!-- <td *ngFor="let le of listNhanVien">{{ le.ho }} {{ le.ten }}</td> -->
+
+          <td>{{ task.status == 1 ? "Đang làm" : "Nghỉ làm" }}</td>
+          <!-- <td>{{ task.leader }}</td> -->
+          <td>{{ task.leader }}</td>
+          <!-- <td>
+            <img src="{{ p.urlImage }}" height="50" />
+          </td> -->
+          <td>
+            <a
+              class="btn btn-primary"
+              href="#"
+              [routerLink]="['/admin/suaTask', task.id]"
+              >Sửa</a
+            >
+            &nbsp;
+            <a class="btn btn-primary" href="#" (click)="xoaTa(task.id)">Xóa</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

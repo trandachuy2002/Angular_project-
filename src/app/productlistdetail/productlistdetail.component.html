@@ -1,0 +1,18 @@
+<div class="card mb-3 mx-auto" style="max-width: 540px; margin: 10px auto">
+  <div class="row g-0">
+    <div class="col-md-10 mx-auto">
+      <img src="{{ sp.hinh }}" class="img-fluid rounded-start" alt="" />
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{ sp.tensp }}</h5>
+        <p class="card-text">
+          {{ sp.mota }}
+        </p>
+        <p class="card-text">
+          <small class="text-muted">{{ sp.giasp | currency: " USD " }}</small>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

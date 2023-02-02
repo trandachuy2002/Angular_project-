@@ -1,0 +1,12 @@
+{
+  "signupUsers": [
+    {
+      "username": "trần đắc huyt",
+      "password": "1",
+      "id": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,0 +1,442 @@
+{
+  "user": [
+    {
+      "un": "admin",
+      "pw": "$2a$10$pPTUZL4bRLgG2GTJBoJg4eB8sv3PDEVq3U/kTamVeIfpC5mQWvgLy",
+      "admin": 1,
+      "id": 5
+    },
+    {
+      "un": "nhanvien",
+      "pw": "$2a$10$tcKxbVX449IoyLdVClrtI.OLuFycds2rvTQG8jjjW27catjVb1iOO",
+      "admin": 0,
+      "id": 6
+    },
+    {
+      "un": "truongphong",
+      "pw": "$2a$10$r3ybvkjSUImGyIbQTb/nfuGxLLomLaWRMH2RogqfTy5GAIZowGrlS",
+      "admin": 1,
+      "id": 7
+    },
+    {
+      "un": "thaylong",
+      "pw": "$2a$10$pHxnzKO0J.OG1KvPGRm12e.FQEO9j4r29sl3U.ZOd2XIjZuoSIqHW",
+      "admin": 0,
+      "id": 9
+    },
+    {
+      "un": "dachuy",
+      "pw": "$2a$10$EacUlAtXR.xAgPWtbtRsqe6k5IxjioVwL62soHllYaSLUeaI3A/SC",
+      "admin": 1,
+      "id": 10
+    },
+    {
+      "un": "test1",
+      "pw": "$2a$10$ROWSPz60xHpd/OvBjwu/guVVIqh9MnkJaaYzlpCFWI1YahzfkGrOe",
+      "admin": 0,
+      "id": 11
+    },
+    {
+      "un": "Express ",
+      "pw": "$2a$10$rsCwH3vY6t449O2VU.D2AuWWCPvle6FGyplig6Bb5SD1VXDH/R6Ra",
+      "admin": 0,
+      "id": 12
+    },
+    {
+      "un": "Express ",
+      "pw": "$2a$10$kiT3GCHUl0zJgrSkNOnjheY4mXYGSFjQyS0CMgrbxhHen.K3IioF6",
+      "admin": 0,
+      "id": 13
+    },
+    {
+      "un": "Express ",
+      "pw": "$2a$10$guF9/wG4z.NI5D9puj6q.uvSPZB7BCT3rlbHaFZQGXepQ/3biBmNC",
+      "admin": 0,
+      "id": 14
+    },
+    {
+      "un": "Express ",
+      "pw": "$2a$10$RXi3yMqgl2d4MzVkDg.bNOL7VUPEXABXOwz1aZfliFJk5wvy6QQHm",
+      "admin": 0,
+      "id": 15
+    },
+    {
+      "un": "dachuy13",
+      "pw": "$2a$10$nR3nOpKKIHBikpz8IkHAuu7Ywv7MIvfUPAFF1iF3SgXh9.qNrsLVi",
+      "admin": 0,
+      "id": 16
+    },
+    {
+      "un": "demo13",
+      "pw": "$2a$10$tLxeNeeBwIJwG8gNIigHp.QatcHIen6VhGd9ImA1ognDXHSWGoMo2",
+      "admin": 1,
+      "id": 17
+    }
+  ],
+  "DuAn": [
+    {
+      "id": 1,
+      "tenDuAn": "Quản lý trại heo rrrrr",
+      "ngayStart": "2022-83-81",
+      "tien": 67000000,
+      "leader": "nam",
+      "thanhvien": "9"
+    },
+    {
+      "id": 2,
+      "tenDuAn": "Cây xanh công viên",
+      "ngayStart": "2022-84-92",
+      "tien": 98500990,
+      "leader": "trung",
+      "thanhvien": "10"
+    },
+    {
+      "id": 3,
+      "tenDuAn": "Website Văn hóa Việt",
+      "ngayStart": "2022-84-15",
+      "tien": 35000000,
+      "leader": "long",
+      "thanhvien": [2, 4]
+    },
+    {
+      "tenDuAn": "Quản lý trại heo rrrrr",
+      "ngayStart": "2022-06-16",
+      "tien": "67000000",
+      "leader": "dat",
+      "thanhvien": "1",
+      "id": 7
+    },
+    {
+      "id": 8,
+      "tenDuAn": "Quản lý trại heo rrrrr",
+      "ngayStart": "2022-06-26",
+      "tien": "67000000",
+      "leader": "  minh",
+      "thanhvien": " 10"
+    },
+    {
+      "tenDuAn": "kkkkkkk",
+      "ngayStart": "2022-06-30",
+      "tien": "75500000",
+      "leader": "minh",
+      "thanhvien": " 1",
+      "id": 11
+    },
+    {
+      "tenDuAn": "đạt nè",
+      "ngayStart": "2022-06-17",
+      "tien": "67000000",
+      "leader": "trung",
+      "thanhvien": " 2,4",
+      "id": 12
+    },
+    {
+      "tenDuAn": "Quản lý trại heo rrrrr",
+      "ngayStart": "2022-06-26",
+      "tien": "75500000",
+      "leader": "dat",
+      "thanhvien": " 10",
+      "id": 13
+    }
+  ],
+  "NhanVien": [
+    {
+      "id": 1,
+      "ho": "Nguyễn Bá",
+      "ten": "Đạo",
+      "ngaysinh": "2001-1-3",
+      "phai": "2",
+      "khuvuc": "Bắc"
+    },
+    {
+      "id": 2,
+      "ho": "Phạm Kỷ",
+      "ten": "Luật",
+      "ngaysinh": "2001-5-6",
+      "phai": "2",
+      "khuvuc": "Bắc"
+    },
+    {
+      "id": "3",
+      "ho": "Trần Đắc ",
+      "ten": "Huy",
+      "ngaysinh": "2022-06-17",
+      "phai": "2",
+      "khuvuc": "Trung"
+    },
+    {
+      "id": "4",
+      "ho": "Tes",
+      "ten": "Ter",
+      "ngaysinh": "2022-06-26",
+      "phai": "1",
+      "khuvuc": "Trung"
+    },
+    {
+      "id": "5",
+      "ho": "Mai Phạt Sầu h",
+      "ten": "tran",
+      "ngaysinh": "2022-06-18",
+      "phai": "0",
+      "khuvuc": "bac"
+    },
+    {
+      "id": "122",
+      "ho": "Mai Phạt Sầu h",
+      "ten": "trieungu",
+      "ngaysinh": "2022-06-17",
+      "phai": "1",
+      "khuvuc": "Trung"
+    },
+    {
+      "id": "12",
+      "ho": "tran44",
+      "ten": "trieungu",
+      "ngaysinh": "2022-06-19",
+      "phai": "phai",
+      "khuvuc": "bac"
+    },
+    {
+      "id": "13",
+      "ho": "Trần Đắc huy",
+      "ten": "huy 12",
+      "ngaysinh": "2022-06-19",
+      "phai": "2",
+      "khuvuc": "Bắc"
+    },
+    {
+      "id": "90",
+      "ho": "trung",
+      "ten": "nghãi a",
+      "ngaysinh": "2022-06-18",
+      "phai": "2",
+      "khuvuc": "Nam"
+    }
+  ],
+  "Task": [
+    {
+      "id": 3,
+      "tenTask": "Tìm hiểu yêu cầu của khách hàng",
+      "duAnID": 2,
+      "nhanvienID": 3,
+      "moTa": "Đến công ty và ghi nhận các yêu cầu của khách hàng",
+      "status": 0,
+      "priority": 2
+    },
+    {
+      "id": 5,
+      "tenTask": "Đổi pass, quên pass a",
+      "moTa": "Thực hiện chức năng đỗi pass, quên pass. Nhớ kiểm tra user login, email tồn tại, pass cũ hợp lệ ",
+      "priority": 1,
+      "status": 0,
+      "duAnID": 1,
+      "nhanvienID": 4
+    },
+    {
+      "id": 7,
+      "tenTask": "Triển khai website",
+      "duAnID": 5,
+      "nhanvienID": 4,
+      "moTa": "Triển khai website lên hosting đã mua",
+      "status": 0,
+      "priority": 2
+    },
+    {
+      "id": 8,
+      "tenTask": "Hướng dẫn sử dụng và bàn giao",
+      "duAnID": 5,
+      "nhanvienID": 1,
+      "moTa": "Hướng dẫn sử dụng cho khách hàng",
+      "status": 0,
+      "priority": 2
+    },
+    {
+      "id": 23,
+      "tenTask": "Thực hiện layout cho ứng dụng nha",
+      "moTa": "Kiểm tra các tính năng bảo mật theo các yêu cầu đã nêu trong tài liệu dự án",
+      "priority": "1",
+      "status": "1",
+      "duAnID": "1",
+      "nhanvienID": "2",
+      "leader": "Luật"
+    },
+    {
+      "id": 26,
+      "tenTask": "Thực hiện layout cho ứng dụng nha",
+      "moTa": "Kiểm tra các tính năng bảo mật theo các yêu cầu đã nêu trong tài liệu dự án",
+      "priority": "1",
+      "status": "1",
+      "duAnID": "2aaaa",
+      "nhanvienID": "1",
+      "leader": "trieungu"
+    },
+    {
+      "id": 27,
+      "tenTask": "huy",
+      "moTa": "Kiểm tra các tính năng bảo mật theo các yêu cầu đã nêu trong tài liệu dự án",
+      "priority": "1",
+      "status": "1",
+      "duAnID": "1",
+      "nhanvienID": "3",
+      "leader": "trieungu"
+    }
+  ],
+  "loaisp": [
+    {
+      "id": 1,
+      "tenLoai": "Điện thoại di động",
+      "soSP": 190
+    },
+    {
+      "id": 2,
+      "tenLoai": "Laptop",
+      "soSP": 178
+    },
+    {
+      "id": 3,
+      "tenLoai": "Đồng hồ đeo tay",
+      "soSP": 143
+    },
+    {
+      "id": 4,
+      "tenLoai": "Gia dụng",
+      "soSP": 781
+    },
+    {
+      "id": 5,
+      "tenLoai": "Đồ điện",
+      "soSP": 351
+    }
+  ],
+  "sanpham": [
+    {
+      "id": 1,
+      "tensp": "Xiaomi Redmi Note 111",
+      "giasp": "5490000",
+      "ngay": "2022-04-01",
+      "hinh": "https://cdn.tgdd.vn/Products/Images/42/245261/Xiaomi-redmi-note-11-blue-600x600.jpg",
+      "mota": "Xiaomi Redmi Note 11 được xem như chiếc smartphone có giá tầm trung ấn tượng, với 1 cấu hình mạnh, cụm camera xịn sò, pin khỏe, sạc nhanh mà giá lại rất phải chăng."
+    },
+    {
+      "id": 2,
+      "tensp": "Phone 13 Pro Max 128GB ",
+      "giasp": "33490000",
+      "mota": "Máy thiết kế không mấy đột phá khi so với người tiền nhiệm, màn hình siêu đẹp, tần số quét nâng cấp lên 120 Hz mượt mà, cảm biến camera có kích thước lớn hơn",
+      "hinh": "https://cdn.tgdd.vn/Products/Images/42/230529/iphone-13-pro-max-xanh-la-thumb-600x600.jpg",
+      "ngay": "2022-04-02",
+      "idLoai": "1"
+    },
+    {
+      "id": 3,
+      "tensp": "Vivo Y33s",
+      "giasp": "6990000",
+      "mota": "Vivo Y33s thiết kế trẻ trung với màu đen tráng gương và xanh mộng mơ. Phiên bản màu đen được phủ lớp tráng gương sáng bóng, có thể trở thành chiếc gương tiện lợi",
+      "hinh": "https://cdn.tgdd.vn/Products/Images/42/249102/Vivo-y33s-yellow-thumb-600x600.jpg",
+      "ngay": "2022-04-03",
+      "idLoai": "1"
+    },
+    {
+      "id": 4,
+      "tensp": "OPPO Reno7 Z 5G",
+      "giasp": "10490000",
+      "mota": "Sản phẩm có thiết kế OPPO Glow độc quyền, camera mang hiệu ứng như máy DSLR chuyên nghiệp cùng viền sáng kép, có cấu hình mạnh mẽ và đạt chứng nhận xếp hạng A về độ mượt.",
+      "hinh": "https://cdn.tgdd.vn/Products/Images/42/271717/oppo-reno7-z-5g-thumb-1-1-600x600.jpg",
+      "ngay": "2022-04-04",
+      "idLoai": "1"
+    },
+    {
+      "id": 5,
+      "tensp": "Samsung Galaxy A03 3GB",
+      "giasp": "2990000",
+      "mota": "Là điện thoại Galaxy A đầu tiên của nhà Samsung trong năm 2022 tại VN. Sản phẩm có giá dễ tiếp cận, camera chính đến 48 MP, pin 5000 mAh thoải mái sử dụng cả ngày.",
+      "hinh": "https://cdn.tgdd.vn/Products/Images/42/251856/samsung-galaxy-a03-xanh-thumb-600x600.jpg",
+      "ngay": "2022-04-02",
+      "idLoai": "1"
+    }
+  ],
+  "posts": [
+    {
+      "id": 2,
+      "firstName": "Abhishek",
+      "lastName": "Yadav",
+      "email": "abhishek.connectrix@gmail.com",
+      "mobile": "9877898765",
+      "salary": "80,000"
+    }
+  ],
+  "signupUsers": [
+    {
+      "fullname": "trần đắc huyt",
+      "email": "trandachuy@gmail.com",
+      "password": "1",
+      "mobile": 1,
+      "id": 1
+    },
+    {
+      "fullname": "trần đắc huytttt",
+      "email": "trandachuy@gmail.com",
+      "password": "1",
+      "mobile": 12,
+      "id": 2
+    },
+    {
+      "fullname": "dat aaa",
+      "email": "dat@gmail.com",
+      "password": "123",
+      "mobile": 123,
+      "id": 3
+    },
+    {
+      "fullname": "thaylong",
+      "email": "thaylong@gmail.com",
+      "password": "1",
+      "mobile": 378941504,
+      "id": 4
+    },
+    {
+      "fullname": "trần đắc huyt",
+      "email": "trandachuy@gmail.com",
+      "password": "1",
+      "mobile": 3,
+      "id": 5
+    },
+    {
+      "fullname": "trần đắc huytttt",
+      "email": "trandachuy@gmail.com",
+      "password": "1",
+      "mobile": 378941504,
+      "id": 6
+    },
+    {
+      "fullname": "trieu",
+      "email": "trieu@gmail.com",
+      "password": "1",
+      "mobile": 80378941504,
+      "id": 7
+    },
+    {
+      "fullname": "trần đắc huyt",
+      "email": "thaylong@gmail.com",
+      "password": "1",
+      "mobile": 378941504,
+      "id": 8
+    },
+    {
+      "fullname": "",
+      "email": "",
+      "password": "",
+      "mobile": "",
+      "id": 9
+    },
+    {
+      "fullname": "truyen@gmail.com",
+      "email": "truyen@gmail.com",
+      "password": "truyen@gmail.com",
+      "mobile": 37894105,
+      "id": 10
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

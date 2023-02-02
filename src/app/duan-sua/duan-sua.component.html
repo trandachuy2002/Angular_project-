@@ -1,0 +1,166 @@
+<style>
+  form {
+    background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+    background: linear-gradient(to right, #25c481, #25b7c4);
+    font-family: "Roboto", sans-serif;
+    padding: 20px;
+  }
+</style>
+<!-- <h5 class="bg-warning p-2">THÊM DỰ ÁN</h5>
+<p class="mb-3 text-dark">
+  Tên dự án
+  <input
+    type="text"
+    class="form-control"
+    name="tenDuAn"
+    [(ngModel)]="da.tenDuAn"
+  />
+</p>
+<p class="mb-3 text-dark">
+  Ngày Start
+  <input
+    type="date"
+    name="ngayStart"
+    [(ngModel)]="da.ngayStart"
+    class="form-control"
+  />
+</p>
+<p class="mb-3 text-dark">
+  Tiền
+  <input name="tien" [(ngModel)]="da.tien" type="text" class="form-control" />
+</p>
+<p class="mb-3 text-dark">
+  Leader
+  <select name="leader" [(ngModel)]="da.leader" class="form-control"></select>
+</p>
+<p class="mb-3 text-dark">
+  Thành viên
+  <select
+    name="thanhvien"
+    [(ngModel)]="da.thanhvien"
+    multiple
+    size="5"
+    class="form-control"
+  ></select>
+</p> -->
+<!-- <button class="btn btn-primary p-2" (click)="capnhatSP()">Sua</button> -->
+<h5 class="bg-warning p-2">Sửa DỰ ÁN</h5>
+<!-- (ngSubmit)="xuly(frm1.value)" -->
+<form #frm1="ngForm" (ngSubmit)="daSua(frm1.value)" class="col-6 m-auto">
+  <p class="mb-3 text-dark">
+    ID
+    <input
+      required
+      type="number"
+      class="form-control"
+      name="id"
+      [(ngModel)]="da.id"
+      required
+      minlength="1"
+      #id="ngModel"
+    />
+    <em *ngIf="id.invalid" class="text-danger"> Nhập id chưa đúng. </em>
+    <span *ngIf="id.errors?.['required']" class="text-danger">
+      id dài từ 1 ký tự nhé.
+    </span>
+    <em
+      *ngIf="id.errors?.['minlength']['actualLength']<id.errors?.['minlength']['requiredLength']"
+      class="text-danger"
+    >
+      id chưa đủ dài
+    </em>
+  </p>
+  <p class="mb-3 text-dark">
+    Tên dự án
+    <input
+      type="text"
+      class="form-control"
+      name="tenDuAn"
+      [(ngModel)]="da.tenDuAn"
+      required
+      minlength="6"
+      #tenduan="ngModel"
+    />
+    <em *ngIf="tenduan.invalid" class="text-danger">
+      Nhập tenduan chưa đúng.
+    </em>
+    <span *ngIf="tenduan.errors?.['required']" class="text-danger">
+      tenduan dài từ 6 ký tự nhé.
+    </span>
+    <em
+      *ngIf="tenduan.errors?.['minlength']['actualLength']<tenduan.errors?.['minlength']['requiredLength']"
+      class="text-danger"
+    >
+      tenduan chưa đủ dài
+    </em>
+  </p>
+  <p class="mb-3 text-dark">
+    Ngày Start
+    <input
+      type="date"
+      name="ngayStart"
+      [(ngModel)]="da.ngayStart"
+      class="form-control"
+      required
+      minlength="8"
+      #ngay="ngModel"
+    />
+    <em *ngIf="ngay.invalid" class="text-danger"> Nhập ngay chưa đúng. </em>
+    <span *ngIf="ngay.errors?.['required']" class="text-danger">
+      ngay dài từ 8 ký tự nhé.
+    </span>
+    <em
+      *ngIf="ngay.errors?.['minlength']['actualLength']<ngay.errors?.['minlength']['requiredLength']"
+      class="text-danger"
+    >
+      ngay chưa đủ dài
+    </em>
+  </p>
+  <p class="mb-3 text-dark">
+    Tiền
+    <input
+      name="tien"
+      [(ngModel)]="da.tien"
+      type="text"
+      class="form-control"
+      required
+      minlength="1"
+      #tien="ngModel"
+    />
+    <em *ngIf="tien.invalid" class="text-danger"> Nhập tien chưa đúng. </em>
+    <span *ngIf="tien.errors?.['required']" class="text-danger">
+      tien dài từ 1 ký tự nhé.
+    </span>
+    <em
+      *ngIf="tien.errors?.['minlength']['actualLength']<tien.errors?.['minlength']['requiredLength']"
+      class="text-danger"
+    >
+      tien chưa đủ dài
+    </em>
+  </p>
+  <p class="mb-3 text-dark">
+    Leader
+    <select
+      name="leader"
+      [(ngModel)]="da.leader"
+      class="form-control"
+      required
+      minlength="1"
+    >
+      <option *ngFor="let item of listDuAn" value="  {{ item.leader }}">
+        <!-- {{ item.leader == 1 ? "Trưởng phòng" : "Nhân viên" }} -->
+        {{ item.leader }}
+      </option>
+    </select>
+  </p>
+  <p class="mb-3 text-dark">
+    Thành viên
+    <select name="thanhvien" [(ngModel)]="da.thanhvien" class="form-control">
+      <option *ngFor="let item of listDuAn" value="item.id">
+        {{ item.thanhvien }}
+      </option>
+    </select>
+  </p>
+  <button class="btn btn-primary p-2">Sửa dự án</button>
+  <!-- <button class="btn btn-primary p-2" (click)="themDa()">Thêm dự án</button> -->
+</form>

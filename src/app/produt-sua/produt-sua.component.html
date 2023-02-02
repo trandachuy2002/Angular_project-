@@ -1,0 +1,98 @@
+<style>
+  form {
+    background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+    background: linear-gradient(to right, #25c481, #25b7c4);
+    font-family: "Roboto", sans-serif;
+    padding: 20px;
+  }
+</style>
+\<!-- <app-sanpham-sua [sp]="sp"></app-sanpham-sua> -->
+
+<!-- <p>
+  Tén SP<input
+    name="tensp"
+    [(ngModel)]="sp.tensp"
+    type="text"
+    class="form-control"
+  />
+</p>
+<p>
+  Gia<input
+    name="giasp"
+    [(ngModel)]="sp.giasp"
+    type="text"
+    class="form-control"
+  />
+</p>
+
+<p>
+  Code
+  <input name="code" [(ngModel)]="sp.code" type="text" class="form-control" />
+</p>
+<p>
+  Ngay<input
+    name="ngay"
+    [(ngModel)]="sp.ngay"
+    type="date"
+    class="form-control"
+  />
+</p>
+
+<p>
+  MO ta<textarea
+    name="mota"
+    [(ngModel)]="sp.mota"
+    class="form-control"
+  ></textarea>
+</p>
+<button class="btn btn-warning py-2 px-5" (click)="capnhatSP()">
+  Sửa<button></button>
+</button> -->
+
+<form
+  #frmSuaSP="ngForm"
+  class="col-6 m-auto"
+  (ngSubmit)="spSua(frmSuaSP.value)"
+>
+  <p>
+    <label class="text-dark">id SP</label>
+    <input
+      name="id"
+      [(ngModel)]="sp.id"
+      readonly
+      class="form-control"
+      type="text"
+    />
+  </p>
+  <p>
+    <label class="text-dark">Tên SP</label>
+    <input
+      name="tensp"
+      [(ngModel)]="sp.tensp"
+      class="form-control"
+      type="text"
+    />
+  </p>
+  <p>
+    <label class="text-dark">Giá SP</label>
+    <input
+      name="giasp"
+      [(ngModel)]="sp.giasp"
+      class="form-control"
+      type="number"
+    />
+  </p>
+  <p>
+    <label class="text-dark">Ngày</label>
+    <input name="ngay" [(ngModel)]="sp.ngay" class="form-control" type="date" />
+  </p>
+  <p>
+    <label class="text-dark">Hình</label>
+    <input name="hinh" [(ngModel)]="sp.hinh" class="form-control" type="text" />
+  </p>
+  <p>
+    <label class="text-dark">Mô tả</label>
+    <input name="mota" [(ngModel)]="sp.mota" class="form-control" type="text" />
+  </p>
+  <p><button type="submit" class="btn btn-success">Sửa SP</button></p>
+</form>
